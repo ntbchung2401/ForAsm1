@@ -7,8 +7,8 @@ namespace ForAsm1.MainRole
 {
     public class Role
     {
-        public const string User = "user";
+        public const string Student = "student";
+        public const string Teacher = "teacher";
         public const string Manager = "manager";
-        public const string Director = "director";
     }
 }

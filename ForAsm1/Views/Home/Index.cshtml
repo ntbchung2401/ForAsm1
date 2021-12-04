@@ -10,10 +10,10 @@
 <div class="row">
     @if (User.Identity.IsAuthenticated)
     {
-        if (User.IsInRole(ForAsm1.MainRole.Role.User))
+        if (User.IsInRole(ForAsm1.MainRole.Role.Student))
         {
             <div class="col-md-4">
-                <h2>Users</h2>
+                <h2>Students</h2>
                 <p>
                     ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
                     enables a clean separation of concerns and gives you full control over markup
@@ -21,17 +21,26 @@
                 </p>
             </div>
         }
+        if (User.IsInRole(ForAsm1.MainRole.Role.Teacher))
+        {
+            <div class="col-md-4">
+                <h2>Teachers</h2>
+                <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+                <p>
+                    @Html.ActionLink("Take Attendances", "TakeAttendance", "Teachers", null, new { @class = "btn btn-primary" })
+                </p>
+                <p>
+                    @Html.ActionLink("Show Students in Class", "ShowClass", "Teachers", null, new { @class = "btn btn-info" })
+                </p>
+                <p>
+                    @Html.ActionLink("Create New Team", "CreateTeam", "Teachers", null, new { @class = "btn btn-success" })
+                </p>
+            </div>
+        }
         if (User.IsInRole(ForAsm1.MainRole.Role.Manager))
         {
             <div class="col-md-4">
                 <h2>Managers</h2>
-                <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            </div>
-        }
-        if (User.IsInRole(ForAsm1.MainRole.Role.Director))
-        {
-            <div class="col-md-4">
-                <h2>Director</h2>
                 <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
             </div>
         }
