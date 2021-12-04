@@ -21,7 +21,7 @@ namespace ForAsm1.Controllers
         {
             return View();
         }
-        public ActionResult ShowClass()
+        public ActionResult ShowClassStudent()
         {
             return View();
         }
