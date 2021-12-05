@@ -79,8 +79,35 @@ namespace ForAsm1.Controllers
             }
             return View(model);
         }
+        [HttpGet]
+        public ActionResult CreateClass()
+        {
+
+            return View();
+        }
+        [HttpPost]
+        public ActionResult CreateClass(Classes model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            var cl = new Classes { Name = model.Name };
+            try
+            {
+                _context.Classes.Add(cl);
+                _context.SaveChanges();
+            }
+            catch (Exception)
+            {
+                ModelState.AddModelError("duplicate", "This class is already existed");
+                return View(model);
+            }
+            return RedirectToAction("CreateClass");
+        }
         public ActionResult RemoveTeacher()
         {
+
             return View();
         }
         public ActionResult ShowClass()

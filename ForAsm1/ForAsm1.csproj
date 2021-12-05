@@ -182,10 +182,19 @@
     <Compile Include="Migrations\202112040134259_CreateCodeFirstDatabase.designer.cs">
       <DependentUpon>202112040134259_CreateCodeFirstDatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112050347127_CreateClassesTable.cs" />
+    <Compile Include="Migrations\202112050347127_CreateClassesTable.designer.cs">
+      <DependentUpon>202112050347127_CreateClassesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112051905230_UpdateTableClass.cs" />
+    <Compile Include="Migrations\202112051905230_UpdateTableClass.designer.cs">
+      <DependentUpon>202112051905230_UpdateTableClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models\Classes.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -253,6 +262,7 @@
     <Content Include="Views\Manager\CreateTeacher.cshtml" />
     <Content Include="Views\Manager\ShowClass.cshtml" />
     <Content Include="Views\Users\InformationUpdate.cshtml" />
+    <Content Include="Views\Manager\CreateClass.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -274,6 +284,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202112040134259_CreateCodeFirstDatabase.resx">
       <DependentUpon>202112040134259_CreateCodeFirstDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112050347127_CreateClassesTable.resx">
+      <DependentUpon>202112050347127_CreateClassesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112051905230_UpdateTableClass.resx">
+      <DependentUpon>202112051905230_UpdateTableClass.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

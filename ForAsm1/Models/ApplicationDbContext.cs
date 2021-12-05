@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
+using System.Data.Entity;
 
 namespace ForAsm1.Models
 {
@@ -8,6 +9,7 @@ namespace ForAsm1.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
+        public DbSet<Classes> Classes { get; set; }
 
         public static ApplicationDbContext Create()
         {

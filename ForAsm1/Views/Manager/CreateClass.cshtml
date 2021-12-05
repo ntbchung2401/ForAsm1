@@ -1,0 +1,17 @@
+﻿@model ForAsm1.Models.Classes
+@{
+    ViewBag.Title = "CreateClass";
+}
+
+<h2>Create new Class</h2>
+@using (Html.BeginForm("CreateClass", "Manager", FormMethod.Post))
+{
+    <div class="form-group">
+        <label>Class Name:</label>
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+        @Html.ValidationMessage("duplicate", new { @class = "text-danger" })
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+}
+
