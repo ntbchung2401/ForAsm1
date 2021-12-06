@@ -120,6 +120,15 @@ namespace ForAsm1.Controllers
               .ToList();
             return View("ShowInfor", users);
         }
+        public ActionResult ShowStudentInfor()
+        {
+            var role = _context.Roles
+        .SingleOrDefault(r => r.Name.Equals(Role.Student));
+            var users = _context.Users
+              .Where(m => m.Roles.Any(r => r.RoleId.Equals(role.Id)))
+              .ToList();
+            return View("ShowInfor", users);
+        }
         public ActionResult ShowClass()
         {
             return View();

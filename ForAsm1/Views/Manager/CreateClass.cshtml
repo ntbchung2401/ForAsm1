@@ -4,6 +4,9 @@
 }
 
 <h2>Create new Class</h2>
+<div class="form-group">
+    @Html.ActionLink("Back to Home", "Index", "Home", null, new { @class = "btn btn-primary" })
+</div>
 @using (Html.BeginForm("CreateClass", "Manager", FormMethod.Post))
 {
     <div class="form-group">
