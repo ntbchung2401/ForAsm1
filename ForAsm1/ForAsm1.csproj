@@ -263,6 +263,7 @@
     <Content Include="Views\Manager\ShowClass.cshtml" />
     <Content Include="Views\Users\InformationUpdate.cshtml" />
     <Content Include="Views\Manager\CreateClass.cshtml" />
+    <Content Include="Views\Manager\ShowInfor.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<ForAsm1.Models.ApplicationUser>
+@{
+    ViewBag.Title = "ShowInfor";
+}
+
+<h2>Show Infor</h2>
+<div class="form-group">
+    @Html.ActionLink("Back to Home", "Index", "Home", null, new { @class = "btn btn-primary" })
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Email</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>
+                    @user.Id
+                </td>
+                <td>
+                    @user.Email
+                </td>
+                <td>
+                    @user.UserName
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
